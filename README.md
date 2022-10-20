@@ -9,9 +9,11 @@
 <p>Onnistuu perus nodejs ajo kuin myös dockerin avulla</p>
 
 ```
-<p>docker build -t app .</p>
-<p>docker run 80:3000 -d --name app app</p>
+npm install
+node app.js
 ```
 
-<p>npm install</p>
-<p>node app.js</p>
+```
+docker build -t app .
+docker run 80:3000 -d --name app app
+```
