@@ -1,20 +1,17 @@
-FROM ubuntu
-EXPOSE 3000
-RUN mkdir /root/app
-ADD modules /root/app/modules
-ADD static /root/app/static
-COPY .env /root/app/
-ADD app.js /root/app/
-ADD objects.json /root/app/
-ADD package.json /root/app/
+FROM node:16
 
-RUN cd /root/app; \
-apt-get -y update; \
+WORKDIR /app
+COPY modules ./modules
+COPY static ./static
+COPY .env .
+COPY app.js .
+COPY objects.json .
+COPY package.json .
+
+RUN apt-get -y update; \
 apt-get -y upgrade; \
 apt-get -y install nodejs npm; \
-npm install; \
-chmod 777 /root/app/*; \
-chmod +x /root/app
+npm install
 
-
-CMD ["node", "/root/app/app.js"];
+EXPOSE 3000
+CMD ["node", "app.js"];

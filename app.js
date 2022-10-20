@@ -5,8 +5,7 @@ const routers = require("./modules/routers");
 
 express.json()
 
-app.use(express.static('static'))
-
+app.use(express.static("static"))
 app.use("/api", routers.api)
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/static/html/index.html")
