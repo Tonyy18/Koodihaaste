@@ -42,7 +42,7 @@ function initStartButton() {
         $(selectors[1]).hide()
         const header2 = $("<h2 class='nameHeader'>" + name2 + "</h2>")
         $(".selectors").append(header2);
-        $(this).hide()
+        $(".toRemove").hide()
         header1.animate({
             "font-size": "26px"
         }, 1500)
