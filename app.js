@@ -5,7 +5,9 @@ const routers = require("./modules/routers");
 
 express.json()
 
+//Route all static files
 app.use(express.static("static"))
+//Api requests, /api/*
 app.use("/api", routers.api)
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/static/html/index.html")

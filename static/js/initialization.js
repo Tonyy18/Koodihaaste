@@ -7,6 +7,7 @@ function showModal(winner) {
 }
 
 function buildSelectors() {
+    //Builds custom select fields
     $.ajax({
         url: "/api/getAvailableObjects",
         success: function(data) {
@@ -26,6 +27,7 @@ function showAlert(text) {
 }
 
 function initStartButton() {
+    //The start button and the startup animations
     const button = $("#startButton")
     button.on("click", function() {
         const selectors = $(".selector")
@@ -57,6 +59,7 @@ function reset() {
     window.location.reload();
 }
 $(function() {
+    //Initializes the UI
     buildSelectors()
     initStartButton();
     $("#restartBtn").click(function() {

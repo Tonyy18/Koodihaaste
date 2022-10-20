@@ -1,4 +1,10 @@
+
+
+//This contains functions to build doms on the fly
+//react would have been too boring ;)
+
 function buildSelectorDom(data,selectedIndex=0) {
+    //Custom select fields on the startup page
     data = data.map(function(item) {
         return item.charAt(0).toUpperCase() + item.slice(1);
     })
@@ -38,10 +44,12 @@ function buildSelectorDom(data,selectedIndex=0) {
 }
 
 function duildStatsRow(label, value) {
+    //Row on the upper table
     return $('<div class="row"><span>' + label + ':</span><span>' + value + '</span></div>')
 }
 
 function buildActionRow(text = "", result = "", time=null) {
+    //Row on the lower table
     const parent = $("<div class='action'></div>");
     parent.append('<span class="text">' + text + '</span>');
     parent.append('<span class="result">' + result + '</span>');

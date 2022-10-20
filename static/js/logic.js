@@ -1,6 +1,6 @@
 
 function buildStats(player1, player2) {
-    console.log(player1)
+    //Builds the upper stats table
     const arr = [player1, player2]
     const statsEl = $(".game .stats")
     for(let a = 0; a < arr.length; a++) {
@@ -40,7 +40,12 @@ class Logger {
 }
 
 function registerEvents(gameObj) {
+    //Callbacks for game events
     gameObj.on("attack", function(attacker, target) {
+        //Log the attack on the lower table
+        if(attacker.damageDealt.toString().includes(".")) {
+            attacker.damageDealt = parseFloat(attacker.damageDealt).toFixed(2)
+        }
         Logger.stats({
             text: attacker.name + " lyö ja tekee",
             value: attacker.damageDealt + " vahinkoa"
@@ -59,6 +64,8 @@ function registerEvents(gameObj) {
 }
 
 function startGame() {
+    //Create new game.
+    //Fancy animations xd
     const selectors = $(".selector");
     const player1 = $(selectors[0]).find(".selected").attr("data-name");
     const player2 = $(selectors[1]).find(".selected").attr("data-name")
