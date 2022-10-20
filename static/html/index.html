@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="exit" id="exit">
+        <span>x</span>
+    </div>
+    <header>
+        <h1>Koodihaaste</h1>
+    </header>
+    <div class="selectors">
+        <img src="/images/battle.png">
+    </div>
+    <button class="btn" id="startButton">Aloita taistelu</button>
+    <div class="game">
+        <div class="gameTop">
+            <section class="stats">
+                <section></section>
+                <section></section>
+            </section>
+            <section class="stats">
+                <section></section>
+                <section></section>
+            </section>
+        </div>
+        <div class="gameBot">
+            <div class="divider left">
+            </div>
+            <div class="divider right">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="modalBackground"></div>
+    <div class="modalPadding">
+        <div class="modalBody">
+            <header>
+                <p>Peli loppui!</p>
+            </header>
+            <section>
+                <h3>Porkkana voitti!</h3>
+                <button class="btn" id="restartBtn">Aloita alusta</button>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="alert" id="alert">
+    <p></p>
+</div>
+<script src="/js/doms.js"></script>
+<script src="/js/initialization.js"></script>
+<script src="/js/Food.js"></script>
+<script src="/js/Game.js"></script>
+<script src="/js/logic.js"></script>
+</body>
+</html>
