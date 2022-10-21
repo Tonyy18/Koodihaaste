@@ -5,6 +5,8 @@
 <p>Fronttina on perus html, css ja javascript. Ei mitään sen ihmeellisempää. Jquery ja fontawesome on myös mukana</p>
 <p>Finelin data mapataan olioihin niinkuin tehtävän annossa pyydettiin</p>
 
+<p>Default portti 3000. Konffaus .env tiedostossa</p>
+  
 <h3>Asennus</h3>
 <p>Onnistuu perus nodejs ajo kuin myös dockerin avulla</p>
 
