@@ -17,7 +17,7 @@ node app.js
 
 ```
 docker build -t app .
-docker run 80:3000 -d --name app app
+docker run -p 80:3000 -d --name app app
 ```
 
 <p>Osallistun arvontaan ja minuun saa ottaa yhteyttä ;)</p>
